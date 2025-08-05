@@ -1,0 +1,29 @@
+Constant (O(1)): No loops (fixed operations).
+x = 5 + 10  # Runs once
+
+Logarithmic (O(log n)): The variable is divided/multiplied in each iteration.
+while n > 0:  
+    n = n // 2  # Halves each time
+
+Linear (O(n)): A single loop with a linear increment/decrement.
+for i in range(n):  # Runs n times
+
+Log-Linear (O(n log n)): A linear loop nested with a logarithmic process (common in divide-and-conquer algorithms like Merge Sort).
+for i in range(n):          # O(n)
+    while j > 0:            # O(log n)
+        j = j // 2
+
+Quadratic (O(n²)): Two nested linear loops.
+for i in range(n):          # O(n)
+    for j in range(n):      # O(n)
+
+Cubic (O(n³)): Three nested linear loops.
+for i in range(n):          # O(n)
+    for j in range(n):      # O(n)
+        for k in range(n):  # O(n)
+
+Exponential (O(2ⁿ)): Recursive calls branching multiple times (e.g., Fibonacci).
+def fib(n):
+    if n <= 1: return n
+    return fib(n-1) + fib(n-2)  # Branches exponentially
+
